@@ -4,32 +4,57 @@ import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 
-
-const { pageTitle = 'VisVrs: An Astro Theme for Visual Storytelling', description = 'VisVrs is an Astro theme specifically designed for photo and text blogging, making it ideal for blog authors and content creators.' } = Astro.props; 
+const {
+	pageTitle = 'BranHills.com',
+	description = 'Personal website and portfolio of Brandon Hills - Staff Product Designer at BizLibrary',
+} = Astro.props;
 ---
+
 <html lang='en'>
-  <head>
-    <!--Global Metadata -->
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
+	<head>
+		<!--Global Metadata -->
+		<meta charset='utf-8' />
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/favicon.svg'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
 
-    <!-- Primary Meta Tags -->
-    <title>{pageTitle}</title>
-    <meta name='description' content={description} />
+		<!-- Primary Meta Tags -->
+		<title>{pageTitle}</title>
+		<meta
+			name='description'
+			content={description}
+		/>
 
-    <!-- Sitemap -->
-    <link rel='sitemap' href='/sitemap-index.xml' />
+		<!-- Sitemap -->
+		<link
+			rel='sitemap'
+			href='/sitemap-index.xml'
+		/>
 
-    <title>{pageTitle}</title>
+		<title>{pageTitle}</title>
 
-    <ViewTransitions />
-  </head>
-  <body class='mx-auto prose prose-neutral px-4 prose-img:rounded dark:prose-invert dark:bg-neutral-900 lg:max-w-screen-lg'>
-  <Header />
-    <h1 class='text-center'>{pageTitle}</h1>
-    <slot />
-    <Footer />
-  </body>
+		<ViewTransitions />
+	</head>
+	<body
+		class='mx-auto prose prose-neutral px-4 prose-img:rounded dark:prose-invert dark:bg-neutral-900 lg:max-w-screen-lg'>
+		<Header />
+		<h1>{pageTitle}</h1>
+		<slot />
+		<Footer />
+	</body>
 </html>
+<style>
+  h1 {
+    padding-left: 2.5rem;
+  }
+</style>
